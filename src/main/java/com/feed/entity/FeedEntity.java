@@ -16,22 +16,28 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FeedEntity {
-
     @Id
     @Column(name = "feed_seq", nullable = false)
     private long feedSeq;
+
     @Column(name = "member_id", nullable = false)
     private long memberId;
+
     @Column(name = "title", nullable = false)
     private String title;
+
     @Column(name = "contents", nullable = false)
     private String contents;
+
     @Column(name = "writer", nullable = false)
     private String writer;
+
     @Column(name = "wish_count", nullable = false)
     private int wishCount;
+
     @Column(name = "updated_at", nullable = false, columnDefinition = "DATETIME")
     private LocalDateTime updatedAt;
+
     @Column(name = "deleted_at", columnDefinition = "DATETIME")
     private LocalDateTime deletedAt;
 }
